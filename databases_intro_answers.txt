@@ -1,0 +1,101 @@
+####DATABASES: INTRODUCTIONS ANSWERS
+
+1. What data types do each of these values represent?
+
+ANSWERS:
+
+<a> "A Clockwork Orange" = STRING
+<b> 42 = INTEGER
+<c> 09/02/1945 = DATE
+<d> 98.7 = FLOAT 
+<e> $15.99 = FLOAT 
+
+
+
+
+2. Explain when a database would be used. Explain when a text file would be used.
+
+ANSWER:
+<a> Databases are used when we need to organize, sort, secure, query and manipulate large collections of data. Databases also allow many multiple people to edit data at the simultaneously
+<b> Text files would be used when the data is more simple and doesn't need the constant updates from multiple users.  Text files are also easier to edit because every programming language supports file-oriented data.  
+
+3. Describe one difference between SQL and other programming languages.
+
+ANSWER: SQL is a declarative language unlike most other programming languages which are procedural.  With procedural algorithms must be defined In order to search the database, with SQL the programmer defines his search criteria and the engine determines the most efficient algorithm to return the desired data. 
+
+4. In your own words, explain how the pieces of a database system fit together at a high level.
+
+ANSWER: A database is a data structure that is used to collect and store organized information. A database uses binary file format, which isn't readable by humans but is easily accessed and read in the system.  The data is stored in tables, using columns, cells and values.  Standardized Query Language(SQL) is used to search or modify the database.  
+
+5. Explain the meaning of table, row, column, and value.
+
+ANSWER: Databases stores the data by using the table structure.  The data is stored in a standardized manor.  The columns in the table are used for an easier identification of the values stored something generic, ie car brand, persons name, or shoe brand.  The rows underneath will store all the specified attributes of the column's identification, inside the columns there will be a value Maserati, Kobe Bryant,  or Nike. 
+
+6. List three data types that can be used in a table.
+
+ANSWER:
+<a> float
+<b> string
+<c> object 
+
+7. Given this payments table, provide an English description of the following queries and include their results:
+
+   <a>SELECT date, amount
+      FROM payments;
+
+	ANSWER: retrieve all dates and amounts from payment table
+		DATE		AMOUNT		
+		5/1/2016	1500.00      
+		5/10/2016	37.00	
+		5/15/2016	124.93
+		5/23/2016	54.72
+   <b>SELECT amount
+      FROM payments
+      WHERE amount > 500;
+
+	ANSWER: retrieve the payments that amounts are greater than 500
+		AMOUNT
+		1500.00
+
+   <c>SELECT *
+      FROM payments
+      WHERE payee = 'Mega Foods';
+
+	ANSWER: retrieve payments that came from 'Mega Foods'
+		124.93
+
+
+ 
+
+8. Given this users table, write SQL queries using the following criteria and include the output:
+
+<a> The email and sign-up date for the user named DeAndre Data.
+
+	ANSWER: SELECT email, signup date
+		FROM users
+		WHERE name = 'DeAndre Data';
+
+	OUPUT: 
+	email			 signup
+	'datad@comcast.net'	 2014-10-24
+
+
+<b> The user ID for the user with email 'aleesia.algorithm@uw.edu'.
+
+	ANSWER: SELECT user ID 
+		FROM users
+		WHERE email = 'aleeseia.algorithm@uw.edu'
+
+	OUTPUT:
+	userid 
+	1
+
+<c> All the columns for the user ID equal to 4.
+
+	ANSWER: SELECT *
+		FROM users
+		WHERE userid = 4;
+
+	OUTPUT:
+	userid	  name: 	           email: 			signup: 
+	4	 'Brandy Boolean'	  'bboolean@nasa.gov'		1999-10-15
